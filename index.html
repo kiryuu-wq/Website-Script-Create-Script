@@ -1,0 +1,65 @@
+<!--  index.html  -->
+<!DOCTYPE html>
+<html lang="id"> 
+<head> 
+<meta  charset="UTF-8"  /> 
+<title>Beli  Otomatis</title> 
+<link  rel="stylesheet"  href="styles.css"  /> 
+</head>
+<body>
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loader"></div>
+</div>
+<div class="form-container">
+<h2>Pembelian Script</h2>
+<form id="buyForm">
+  <label>Token Bot:</label><br>
+  <input type="text" id="botToken" required /><br>
+  <label>Chat ID:</label><br>
+  <input type="text" id="chatId" required /><br>
+  <label>Pilih Script:</label><br>
+  <select id="scriptOption">
+    <option value="sc-push-nama.zip">Script Push Kontak 4K</option>
+    <option value="sc-cpanel-nama.zip">Script Cpanel 7K</option>
+    <option value="sc-nama.zip">Script Custom 5K</option>
+  </select><br><br>
+  <!-- Tambahkan kolom lain sesuai kebutuhan -->
+  <button type="submit">Beli Sekarang</button>
+</form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+``** 
+
+**Bahasa Indonesia: **2. CSS Animasi Loading (CSS)**  
+```css
+/*  gaya.css  */ 
+badan  {
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
